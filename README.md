@@ -13,14 +13,17 @@ being the most relevant.
 We also needed to be able to sever dependencies on ansible plugins / libraries.
 
 Simple inventory that creates instance json records with MaaS attributes <br>
-Inventory Output Example: <br>
-{<br>
-    "ansible_host": "vault.halo.lan",<br>
-    "ansible_user": "ubuntu",<br>
-    "archictecture": "amd64/generic",<br>
-    "block_devices": {<br>
-        "sda": {<br>
-            "block_size": 512,<br>
+
+**Inventory Output Example:** <br>
+
+```
+{
+    "ansible_host": "vault.halo.lan",
+    "ansible_user": "ubuntu",
+    "archictecture": "amd64/generic",
+    "block_devices": {
+        "sda": {
+            "block_size": 512,
             "id": 64,
             "id_path": "/dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_lxd_root",
             "model": "QEMU HARDDISK",
@@ -122,6 +125,7 @@ Inventory Output Example: <br>
     },
     "zone": "halo"
 }
+```
 
 ## Prerequisites: <br>
 1. A deployed instance of Cononical's MaaS v2.7 or better.<br>
@@ -140,7 +144,7 @@ Python libs: <br>
 ## To Install: <br>
 1. Clone this git repo.
 2. Install the dependencies.<br>
-   > cd ansiblemaas <br>
+   > cd AnsibleMaaS <br>
    > sudo pip install -r requirements.txt<br>
 3. Copy the AnsibleMaaS.py file to the directory where you manage your ansible dynamic inventory.<br>
   Normally: "/etc/ansible/inventory" <br>
@@ -166,7 +170,11 @@ centos8_user = "cloud-user"<br>
 windows_user = "cloud-admin"<br>
 
 Once everything is setup simply execute an ansible module against the inventory.
-> ansible -m ping all
+> ansible -m ping all <br>
+  
+  and / or <br>
+  
+> ansible-inventory --list <br>
 
 ## Instance access issues.
 MaaS deploys private keys on bare metal and vm instances. Whichever user is is running ansible must have public keys associated with ssh on
