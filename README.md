@@ -27,9 +27,9 @@ Python libs: <br>
   Normally: "/etc/ansible/inventory" <br>
   Read this if you need help - https://docs.ansible.com/ansible/latest/user_guide/intro_dynamic_inventory.html
 4. Set environment varibles!!
-<br>
    > export MAAS_API_KEY=APIKEY-TO-ACCESS-MAAS-API #  <br>
    > export MAAS_URL=http://(IP or FQDN):5240/MAAS/api/2.0 # FQDN and URL of your MaaS Region API. <br>
+  
 <br>
 
 ## Edit AnsiblMaaS.py to set options: <br>
