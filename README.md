@@ -39,13 +39,16 @@ include_bare_metal = "True"      # "True" will include KVM hosts in the inventor
 include_host_details = "True".   # Will include all known facts from MaaS into the inventory<br>
 <br>
 
-## ansible_user to be used for differing OSs:
+### ansible_user to be used for differing OSs:
 ubuntu_user = "ubuntu"        
 centos7_user = "centos"<br>
 centos8_user = "cloud-user"<br>
 windows_user = "cloud-admin"<br>
 
-## Deployed keys
+Once everything is setup simply execute an ansible module against the inventory.
+> ansible -m ping all
+
+## Instance access issues.
 MaaS deploys private keys on bare metal and vm instances. Whichever user is is running ansible must have public keys associated with ssh on
 each instaance ansible will need to access. If you are unfamiliar with ansible, ansible-inventory or ssh, take the time to read the docs.<br>
 Having a strategy on inventory and ssh is a good idea. Rotating keys, using secrets managment are generally a good idea. <br>
