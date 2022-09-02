@@ -2,6 +2,7 @@
 
 Ansible dynamic inventory script written in python to pull inventory from Canonical MaaS. <br>
 Originally part of a larger integration effort with MaaS the inventory component was spun off on its own. <br>
+This invnetory script uses libmaas.
 
 Existing integrations with MaaS only provided a list of hosts and required complicated playbooks to implement any
 form of automation. The plugins were slow sometimes taking more than 5 minutes to pull a handfull of host instances. 
@@ -12,6 +13,115 @@ being the most relevant.
 We also needed to be able to sever dependencies on ansible plugins / libraries.
 
 Simple inventory that creates instance json records with MaaS attributes <br>
+Inventory Output Example:
+{
+    "ansible_host": "vault.halo.lan",
+    "ansible_user": "ubuntu",
+    "archictecture": "amd64/generic",
+    "block_devices": {
+        "sda": {
+            "block_size": 512,
+            "id": 64,
+            "id_path": "/dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_lxd_root",
+            "model": "QEMU HARDDISK",
+            "size": 10000007168,
+            "type": "PHYSICAL",
+            "used": 9996075008,
+            "used_for": "GPT partitioned with 2 partitions"
+        }
+    },
+    "cpus": 4,
+    "distro_series": "focal",
+    "fqdn": "vault.halo.lan",
+    "hostname": "vault",
+    "interfaces": {
+        "br-enp2s0": {
+            "enabled": true,
+            "id": 104,
+            "mac_address": "ec:d6:8a:17:1d:74",
+            "mtu": 1500,
+            "params": {
+                "bridge_fd": 15,
+                "bridge_stp": false,
+                "bridge_type": "standard"
+            },
+            "type": "BRIDGE"
+        },
+        "enp2s0": {
+            "enabled": true,
+            "id": 103,
+            "mac_address": "ec:d6:8a:17:1d:74",
+            "mtu": 1500,
+            "params": "",
+            "type": "PHYSICAL"
+        },
+        "eth0": {
+            "enabled": true,
+            "id": 484,
+            "mac_address": "00:16:3e:4d:87:21",
+            "mtu": 1500,
+            "params": "",
+            "type": "PHYSICAL"
+        },
+        "lxdbr0": {
+            "enabled": true,
+            "id": 105,
+            "mac_address": "00:16:3e:a6:a1:4b",
+            "mtu": 1500,
+            "params": "",
+            "type": "BRIDGE"
+        },
+        "tap66c2cb36": {
+            "enabled": true,
+            "id": 419,
+            "mac_address": "56:14:72:cc:17:ad",
+            "mtu": 1500,
+            "params": "",
+            "type": "PHYSICAL"
+        },
+        "tapc44828f4": {
+            "enabled": true,
+            "id": 120,
+            "mac_address": "06:6d:bb:45:f2:4c",
+            "mtu": 1500,
+            "params": "",
+            "type": "PHYSICAL"
+        },
+        "tapd2cdd085": {
+            "enabled": true,
+            "id": 485,
+            "mac_address": "ea:44:c1:4d:6d:54",
+            "mtu": 1500,
+            "params": "",
+            "type": "PHYSICAL"
+        },
+        "wlp1s0": {
+            "enabled": true,
+            "id": 106,
+            "mac_address": "08:ed:b9:c2:93:2b",
+            "mtu": 1500,
+            "params": "",
+            "type": "PHYSICAL"
+        }
+    },
+    "ip_addresses": [
+        "10.1.1.31"
+    ],
+    "memory": 4096,
+    "netboot": false,
+    "node_type": 0,
+    "operating_system": "ubuntu-focal",
+    "os": "ubuntu",
+    "pool": "virtual",
+    "status": "DEPLOYED",
+    "system_id": "gfx7qd",
+    "tags": {
+        "pod-console-logging": "null",
+        "tag_AppType_vault": "null",
+        "virtual": "null"
+    },
+    "zone": "halo"
+}
 
 ## Prerequisites: <br>
 1. A deployed instance of Cononical's MaaS v2.7 or better.<br>
