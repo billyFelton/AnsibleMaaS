@@ -158,7 +158,9 @@ def getmachines():
                 maas_machines.update( { host["hostname"]: host })
         if include_bare_metal == "True" or include_bare_metal == "true":
             maas_machines.update( { host["hostname"]: host })
-    return maas_machines
+    maas_data = { "children": maas_machines }
+    maas = { "maas": maas_data }
+    return maas
 #
 def gettags():
     maas_tags = []
