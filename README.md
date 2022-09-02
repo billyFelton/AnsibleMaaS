@@ -13,14 +13,14 @@ being the most relevant.
 We also needed to be able to sever dependencies on ansible plugins / libraries.
 
 Simple inventory that creates instance json records with MaaS attributes <br>
-Inventory Output Example:
-{
-    "ansible_host": "vault.halo.lan",
-    "ansible_user": "ubuntu",
-    "archictecture": "amd64/generic",
-    "block_devices": {
-        "sda": {
-            "block_size": 512,
+Inventory Output Example: <br>
+{<br>
+    "ansible_host": "vault.halo.lan",<br>
+    "ansible_user": "ubuntu",<br>
+    "archictecture": "amd64/generic",<br>
+    "block_devices": {<br>
+        "sda": {<br>
+            "block_size": 512,<br>
             "id": 64,
             "id_path": "/dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_lxd_root",
             "model": "QEMU HARDDISK",
