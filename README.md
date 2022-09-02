@@ -24,7 +24,8 @@ Python libs: <br>
 > cd ansiblemaas <br>
 > sudo pip install -r requirements.txt<br>
 3. Copy the AnsibleMaaS.py file to the directory where you manage your ansible dynamic inventory.<br>
-Normally: "/etc/ansible/inventory" <br>
+  Normally: "/etc/ansible/inventory" <br>
+  Read this if you need help - https://docs.ansible.com/ansible/latest/user_guide/intro_dynamic_inventory.html
 4. Set environment varibles!! <br>
 <br>
 export MAAS_API_KEY=APIKEY-TO-ACCESS-MAAS-API #  <br>
