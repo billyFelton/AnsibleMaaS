@@ -40,7 +40,7 @@ include_host_details = "True".   # Will include all known facts from MaaS into t
 <br>
 
 ## ansible_user to be used for differing OSs:
-ubuntu_user = "ubuntu" <br>        
+ubuntu_user = "ubuntu"        
 centos7_user = "centos"<br>
 centos8_user = "cloud-user"<br>
 windows_user = "cloud-admin"<br>
