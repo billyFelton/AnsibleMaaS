@@ -21,8 +21,8 @@ Python libs: <br>
 ## To Install: <br>
 1. Clone this git repo.
 2. Install the dependencies.<br>
-> cd ansiblemaas <br>
-> sudo pip install -r requirements.txt<br>
+   > cd ansiblemaas <br>
+   > sudo pip install -r requirements.txt<br>
 3. Copy the AnsibleMaaS.py file to the directory where you manage your ansible dynamic inventory.<br>
   Normally: "/etc/ansible/inventory" <br>
   Read this if you need help - https://docs.ansible.com/ansible/latest/user_guide/intro_dynamic_inventory.html
