@@ -1,6 +1,15 @@
 # AnsibleMaaS
 
 Ansible dynamic inventory script written in python to pull inventory from Canonical MaaS. <br>
+Originally part of a larger integration effort with MaaS the inventory component was spun off on its own. <br>
+
+Existing integrations with MaaS only provided a list of hosts and required complicated playbooks to implement any
+form of automation. The plugins were slow sometimes taking more than 5 minutes to pull a handfull of host instances. 
+
+We needed to be able to sort invnetory based off MaaS specific attributes and associations. Resource pools, availibility zones and simple tagging 
+being the most relevant. 
+
+We also needed to be able to sever dependencies on ansible plugins / libraries.
 
 Simple inventory that creates instance json records with MaaS attributes <br>
 
