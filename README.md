@@ -182,3 +182,4 @@ each instaance ansible will need to access. If you are unfamiliar with ansible, 
 Having a strategy on inventory and ssh is a good idea. Rotating keys, using secrets managment are generally a good idea. <br>
 - Getting started with Ansible - https://docs.ansible.com/ansible/latest/getting_started/index.html <br>
 - Ansible Connection Methods. - https://docs.ansible.com/ansible/latest/user_guide/connection_details.html <br>
+- Halo https://www.halo.inc/ansible-integration-with-maas/ <br>
