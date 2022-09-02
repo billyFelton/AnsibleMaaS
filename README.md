@@ -13,7 +13,7 @@ Simple inventory that creates instance json records with MaaS attributes <br>
 ## Dependencies: <br>
 Python libs: <br>
 - ansible<br>
-- libmaas<br><br>
+- libmaas<br>
 - json <br>
 - packaging<br>
 - os<br>
