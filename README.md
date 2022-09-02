@@ -46,7 +46,7 @@ centos8_user = "cloud-user"<br>
 windows_user = "cloud-admin"<br>
 
 ## Deployed keys
-MaaS deploys private keys on bare metal and vm instances. Whichever user is is running ansible must have public keys associated with ssh on <br>
+MaaS deploys private keys on bare metal and vm instances. Whichever user is is running ansible must have public keys associated with ssh on
 each instaance ansible will need to access. If you are unfamiliar with ansible, ansible-inventory or ssh, take the time to read the docs.<br>
 Having a strategy on inventory and ssh is a good idea. Rotating keys, using secrets managment are generally a good idea. <br>
 - Getting started with Ansible - https://docs.ansible.com/ansible/latest/getting_started/index.html <br>
