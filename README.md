@@ -9,8 +9,6 @@ Simple inventory that creates instance json records with MaaS attributes <br>
 2. Ansible v2.9 or newer installed and configured on a server/vm that has network access to the MaaS APIs.<br>
 3. Python3 installed on the Ansible server(Control/Tower)/vm.<br>
 4. Network access to the MaaS API URL and an API Key.<br>
-<br>
-<br>
 
 ## Dependencies: <br>
 Python libs: <br>
@@ -41,10 +39,9 @@ include_bare_metal = "True"      # "True" will include KVM hosts in the inventor
 include_host_details = "True".   # Will include all known facts from MaaS into the inventory<br>
 <br>
 
-## ansible_user to be used for differing OSs: <br>
+## ansible_user to be used for differing OSs:
 ubuntu_user = "ubuntu" <br>        
 centos7_user = "centos"<br>
 centos8_user = "cloud-user"<br>
 windows_user = "cloud-admin"<br>
-
 
